@@ -37,5 +37,7 @@ class UsersTableSeeder extends Seeder
           'password' => bcrypt('paciente1-123')
         ]);
 
+        $paciente->assignRole('paciente');
+
     }
 }

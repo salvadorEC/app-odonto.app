@@ -30,6 +30,25 @@ class HomeController extends Controller
 
         $rol = $user->roles->implode('name');
 
-        return view('home');
+
+        switch ($rol) {
+          case 'recepcion':
+          $saludo = "Recepcion";
+          return view('home',compact('saludo'));
+
+          break;
+
+          case 'doctor':
+          $saludo = "Doctor";
+          return view('home',compact('saludo'));
+
+          break;
+
+          case 'paciente':
+          $saludo = "Paciente";
+          return view('home',compact('saludo'));
+
+          break;
+        }
     }
 }

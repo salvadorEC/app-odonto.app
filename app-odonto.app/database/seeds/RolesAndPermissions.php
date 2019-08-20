@@ -22,6 +22,9 @@ class RolesAndPermissions extends Seeder
       Permission::create(['name' => 'editar_citas']);
       Permission::create(['name' => 'cancelar_citas']);
       Permission::create(['name' => 'ver_doctores']);
+      Permission::create(['name' => 'registrar_pacientes']);
+      Permission::create(['name' => 'editar_pacientes']);
+
 
       // create roles and assign created permissions
 
@@ -31,11 +34,17 @@ class RolesAndPermissions extends Seeder
       $role->givePermissionTo('editar_citas');
       $role->givePermissionTo('cancelar_citas');
       $role->givePermissionTo('ver_doctores');
+      $role->givePermissionTo('registrar_pacientes');
+      $role->givePermissionTo('editar_pacientes');
+
       //doctor
       $role = Role::create(['name'=> 'doctor']);
       $role->givePermissionTo('crear_citas');
       $role->givePermissionTo('editar_citas');
       $role->givePermissionTo('cancelar_citas');
+      $role->givePermissionTo('registrar_pacientes');
+      $role->givePermissionTo('editar_pacientes');
+
       //paciente
       $role = Role::create(['name'=> 'paciente']);
 
