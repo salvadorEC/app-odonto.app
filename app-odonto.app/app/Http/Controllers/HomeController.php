@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth; //obtener el user logueado
+
 
 class HomeController extends Controller
 {
@@ -23,6 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+        $user = Auth::user();//obtener el user logueado
+
+        $rol = $user->roles->implode('name');
+
         return view('home');
     }
 }
