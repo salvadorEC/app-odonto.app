@@ -13,6 +13,12 @@ try {
     require('bootstrap');
 } catch (e) {}
 
+//bootstrap-vue
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+
+Vue.use(BootstrapVue)
+
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
