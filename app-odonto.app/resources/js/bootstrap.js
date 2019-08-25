@@ -13,10 +13,18 @@ try {
     require('bootstrap');
 } catch (e) {}
 
+<<<<<<< HEAD
 //bootstrap-vue 
 import Vue from 'vue'
 	import BootstrapVue from 'bootstrap-vue'
 	Vue.use(BootstrapVue)
+=======
+//bootstrap-vue
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+
+Vue.use(BootstrapVue)
+>>>>>>> e8b8c5e
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

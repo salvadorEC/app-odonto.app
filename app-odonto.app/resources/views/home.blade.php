@@ -1,23 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ $saludo }}</div>
+  <template>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-md-8">
+                  <div class="card">
+                    <div class="card-header text-white bg-dark"><i class="fas fa-notes-medical"></i> Citas Medicas V1.0.0</div>
+                    <!-- acceder al home -->
+                    @hasanyrole('doctor')
+                    <citas-component></citas-component>
+                    @endrole
+                    <!-- acceder al objeto ver doctores -->
+                    @role('recepcion')
+                    <verdoctores-component></verdoctores-component>
+                    @endrole
+                  </div>
+              </div>
+          </div>
+      </div>
+  </template>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection
