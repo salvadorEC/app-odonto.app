@@ -6,7 +6,7 @@
           <div class="row justify-content-center">
               <div class="col-md-8">
                   <div class="card">
-                    <div class="card-header text-white bg-dark"><i class="fas fa-notes-medical"></i> Citas Medicas V1.0.0</div>
+                    <div class="card-header text-white bg-dark"><i class="fas fa-notes-medical"></i> Citas Medicas V1.0.0 {{$saludo}}</div>
                     <!-- acceder al home -->
                     @hasanyrole('doctor')
                     <citas-component></citas-component>
